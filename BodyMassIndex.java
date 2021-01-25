@@ -1,7 +1,6 @@
-public class Main {
-    public static void main(String[] args) {
-        BodyMassIndex service = new BodyMassIndex();
-       float index = service.calculate(180, 70);
-        System.out.println("Индекс массы тела " + index);
+public class BodyMassIndex {
+    public float calculate( float weight,float growth) {
+       float index = weight / (growth * growth) * 100;
+        return index;
     }
 }
